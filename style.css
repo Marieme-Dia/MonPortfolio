@@ -1,0 +1,291 @@
+/* Global */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+/* Navigation */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10em;
+}
+.top-bar {
+  background-color: rgb(88, 31, 31);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  padding: 1em ;
+  text-align: center;
+  position: fixed;         
+  top: 0;                  
+  width: 100%;           
+  z-index: 1000; 
+}
+
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.top-bar.scrolled {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.top-bar.scrolled a {
+  color: rgb(88, 31, 31);
+}
+/* Accueil */
+.main-banner {
+  background-image: url("images/banner.PNG");
+  background-size: cover;
+  background-position: center;
+  height: 540px;
+  color: rgb(88, 31, 31);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-banner h1 {
+  font-size: 6em;
+  margin: 0;
+}
+
+.main-banner h3 {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+}
+
+/* À propos */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3em 2em;
+  background-color: #f5f5f5;
+}
+
+.about-section .photo img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-section .texte {
+  max-width: 500px;
+}
+
+.about-section h1 {
+  margin-bottom: 0.2em;
+}
+
+.about-section h3 {
+  margin-top: 0;
+  color: rgb(88, 31, 31);
+}
+
+/* Autres sections */
+.section {
+  padding: 3em 2em;
+  background-color: #f9f9f9;
+}
+
+.section:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+.section h2 {
+  color: rgb(88, 31, 31);
+  text-align: center;
+  font-size: 3em;
+}
+
+/* Section compétences */
+.competence-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.competence-section .photo-competence img {
+  width: 650px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.competences-texte {
+  max-width: 500px;
+}
+
+.competences-texte ul {
+  list-style: none;
+  padding: 0;
+}
+
+.competences-texte li {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.competences-texte li::before {
+  content: "✔";
+  color: rgb(88, 31, 31);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+/* Section Contact */
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding-top: 1em;
+}
+
+.formulaire-contact {
+  max-width: 400px;
+  flex: 1;
+}
+
+.image-contact img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.projet {
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+.projet h3 {
+  color: rgb(88, 31, 31);
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.projet p {
+  max-width: 800px;
+  margin: 0 auto 1.5em;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+.projet img {
+  max-width: 30%;
+  height: 20%;
+  border-radius: 10px;
+  margin: 0.5em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Formulaire */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: rgb(88, 31, 31);
+  color: white;
+  padding: 0.7em 2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Pied de page */
+.footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  
+}
+
+/* Effet zoom au survol */
+.projet img:hover,
+.zoom-hover img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ajout de margin-top pour éviter le recouvrement par le menu */
+body {
+  padding-top: 80px; 
+}
+
+/* Responsive général */
+@media (max-width: 768px) {
+  .about-section,
+  .competence-container,
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-section .photo img {
+    width: 80%;
+    margin-bottom: 1em;
+  }
+
+  .competences-texte,
+  .photo-competence,
+  .formulaire-contact,
+  .image-contact img {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .projet img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .main-banner h1 {
+    font-size: 3em;
+  }
+
+  .main-banner h3 {
+    font-size: 1.2em;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+

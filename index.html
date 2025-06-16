@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Marieme Dia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Feuille de style principale -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Animation AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Barre de navigation fixe -->
+  <header class="top-bar">
+    <nav class="nav-bar">
+      <div class="logo">
+    <a href="#home"><h2>Portfolio M.D</h2></a>
+  </div>
+      <ul>
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section d'accueil -->
+  <section id="home" class="main-banner" data-aos="zoom-in">
+    <h1>Portfolio</h1>
+    <h3>Designer Graphique</h3>
+  </section>
+
+  <!-- À propos -->
+  <section id="a-propos" class="about-section" data-aos="fade-up">
+    <div class="photo">
+      <img src="images/moi.jpg" alt="Photo de Marieme Dia">
+    </div>
+    <div class="texte">
+      <h1>Marieme Dia</h1>
+      <h3>Designer Graphique</h3>
+      <p>
+        Je suis passionnée par la création visuelle, les couleurs, les formes, et la communication à travers le design. 
+        Mon objectif est de transformer des idées en visuels impactants et professionnels.
+      </p>
+    </div>
+  </section>
+
+  <!-- Compétences -->
+  <section id="competences" class="competence-section section" data-aos="fade-down">
+    <h2>Mes Compétences</h2>
+    <div class="competence-container">
+      <div class="competences-texte">
+        <ul>
+          <li>Adobe Photoshop</li>
+          <li>Adobe Illustrator</li>
+          <li>HTML / CSS / JavaScript</li>
+          <li>UI / UX Design (Figma)</li>
+          <li>Montage Vidéo (Canva, CapCut)</li>
+        </ul>
+      </div>
+      <div class="photo-competence">
+        <img src="images/icones.png" alt="Icônes de compétences">
+      </div>
+    </div>
+  </section>
+
+  <!-- Projets -->
+  <section id="projets" class="section" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <h2>Mes Projets</h2>
+
+    <!-- Projet 1 : Panier Teranga -->
+    <div class="projet panier-teranga">
+      <h3>Panier Teranga</h3>
+      <p>Création du logo et déclinaisons en mockups pour une marque sénégalaise de vente de fruits et légumes locaux.</p>
+      <div class="images-panier zoom-hover">
+        <img src="images/panierteranga.png" alt="Logo Panier Teranga">
+        <img src="images/panierteranga1.png" alt="Mockup Panier Teranga 1">
+        <img src="images/panierteranga2.png" alt="Mockup Panier Teranga 2">
+      </div>
+    </div>
+
+    <!-- Projet 2 : UI/UX E-learning -->
+    <div class="projet e-learning" data-aos="zoom-in">
+      <h3>Design d’un site E-learning</h3>
+      <p>Conception UI/UX avec Figma pour une plateforme de formation en ligne : ergonomie, parcours utilisateur, maquettes responsives.</p>
+      <img src="images/E-Learning (1).jpg" alt="Maquette UI/UX E-learning">
+    </div>
+
+    <!-- Projet 3 : Calculatrice -->
+    <div class="projet calculatrice" data-aos="zoom-in">
+      <h3>Calculateur de prêt hypothécaire</h3>
+      <p>Développement d’une calculatrice fonctionnelle en HTML, CSS et JavaScript pour pratiquer la logique et l’interaction utilisateur.</p>
+      <img src="images/calculateur.PNG" alt="Interface Calculatrice">
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section section" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+    <h2>Contactez-moi</h2>
+    <div class="contact-container">
+      <div class="image-contact">
+        <img src="images/contact.png" alt="Illustration Contact">
+      </div>
+      <div class="formulaire-contact">
+        <form id="formulaire-contact">
+          <input type="text" placeholder="Votre nom" required>
+          <input type="email" placeholder="Votre email" required>
+          <textarea placeholder="Votre message" required></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <p>&copy; 2025 Marieme Dia - Portfolio</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
