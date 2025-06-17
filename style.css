@@ -12,7 +12,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10em;
+ padding: 0 10em;
+  flex-wrap: wrap;
 }
 .top-bar {
   background-color: rgb(88, 31, 31);
@@ -249,43 +250,97 @@ body {
 
 /* Responsive général */
 @media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    padding: 0 1em;
+    gap: 1em;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+
   .about-section,
   .competence-container,
   .contact-container {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
 
-  .about-section .photo img {
-    width: 80%;
-    margin-bottom: 1em;
+  .about-section .photo img,
+  .image-contact img,
+  .photo-competence img {
+    width: 90%;
+    height: auto;
+    margin: auto;
   }
 
   .competences-texte,
-  .photo-competence,
-  .formulaire-contact,
-  .image-contact img {
-    width: 100%;
-    max-width: 90%;
+  .formulaire-contact {
+    width: 90%;
   }
 
-  .projet img {
-    max-width: 90%;
+  .main-banner {
     height: auto;
+    padding: 4em 1em;
   }
 
   .main-banner h1 {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   .main-banner h3 {
     font-size: 1.2em;
   }
 
-  .nav-bar ul {
-    flex-direction: column;
-    gap: 1em;
+  .projet img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0.5em auto;
   }
 }
 
+/* Bouton menu hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+}
+
+/* Menu normal */
+.menu {
+  display: flex;
+  gap: 2em;
+}
+
+/* Menu mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(88, 31, 31);
+    width: 100%;
+    position: absolute;
+    top: 70px; /* en-dessous de la barre */
+    left: 0;
+    z-index: 999;
+    padding: 1em 0;
+    text-align: center;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 1em 0;
+  }
+}
