@@ -141,6 +141,14 @@
     toggle.addEventListener("click", () => {
       menu.classList.toggle("active");
     });
+
+    // 👉 Fermer le menu quand on clique sur un lien
+    const links = document.querySelectorAll(".menu a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
+    });
   });
   </script>
   <script src="script.js"></script>
