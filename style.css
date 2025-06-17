@@ -9,11 +9,14 @@ body {
 
 /* Navigation */
 .nav-bar {
-  display: flex;
-  align-items: center;
+   display: flex;
   justify-content: space-between;
- padding: 0 10em;
-  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #5a1e1e; /* ta couleur de fond */
+  color: white;
+  position: relative;
+  z-index: 1000;
 }
 .top-bar {
   background-color: rgb(88, 31, 31);
@@ -306,7 +309,7 @@ body {
 /* Bouton menu hamburger */
 .menu-toggle {
   display: none;
-  font-size: 2em;
+  font-size: 30px;
   cursor: pointer;
   color: white;
 }
@@ -314,26 +317,31 @@ body {
 /* Menu normal */
 .menu {
   display: flex;
-  gap: 2em;
+  gap: 20px;
+  list-style: none;
 }
 
 /* Menu mobile */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 1100;
   }
 
   .menu {
     display: none;
     flex-direction: column;
-    background-color: rgb(88, 31, 31);
-    width: 100%;
+    background-color: #5a1e1e;
     position: absolute;
-    top: 70px; /* en-dessous de la barre */
+    top: 60px; /* en dessous de la barre */
     left: 0;
-    z-index: 999;
-    padding: 1em 0;
+    width: 100%;
+    padding: 20px 0;
     text-align: center;
+    z-index: 1000;
   }
 
   .menu.active {
@@ -341,6 +349,12 @@ body {
   }
 
   .menu li {
-    margin: 1em 0;
+    margin: 10px 0;
   }
+  .menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
+}
+
